@@ -9,7 +9,7 @@ function App(){
 
 
   const loadTasks =async()=>{
-    const response = await axios.get('http://localhost:5000/all-tasks')
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/all-tasks`)
     
     setTasks(response.data.data);
   }
