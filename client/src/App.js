@@ -9,7 +9,7 @@ function App(){
 
 
   const loadTasks =async()=>{
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/all-tasks`)
+    const response = await axios.get('http://localhost:5000/all-tasks')
     
     setTasks(response.data.data);
   }
@@ -33,7 +33,7 @@ alert(response.data.message);
 
   return (
     <div className='todo-container'>
-      <h1 className='todo-heading'>ToDO App</h1>
+      <h1 className='todo-heading'>ToDO App By Vishal</h1>
       {
         tasks.map((task,i)=>{
           const {id, title, priority} =task;
